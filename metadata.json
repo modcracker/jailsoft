@@ -1,0 +1,8 @@
+{
+  "name": "Jailsoft",
+  "description": "Enterprise software, hardware, and communications systems for corrections, detention, and justice facilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
