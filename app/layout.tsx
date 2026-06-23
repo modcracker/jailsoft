@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css"; // Global styles
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { Analytics } from '@vercel/analytics/next';
 
 // Font setup matching geometric display sans paired with clean readable body sans
 const inter = Inter({
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
