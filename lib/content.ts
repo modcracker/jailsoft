@@ -973,7 +973,7 @@ export const staticPagesData = {
       "Rather than prioritizing personal branding or executive public profiles, Jailsoft operates with a deliberate corporate structure. Our projects and technical milestones are driven by the collective expertise of Jailsoft Labs, our specialized systems engineering teams, and the Jailsoft Research Group. By focusing on collective technical delivery, we ensure our research, hardware designs, and code-bases remain aligned with the strict standards required by government agencies.",
       "Every product we build represents years of engineering, rigorous testing, and close compliance reviews. We do not design simple decorative consumer solutions; we craft ruggedized high-uptime infrastructures capable of operating continuously in steel and masonry environments. This focus on durability, safety, and compliance has made us a trusted technical vendor for corrections organizations nationwide."
     ],
-    image: "https://picsum.photos/seed/jailsoft-about/1200/800",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Established systems developer specializing in corrections GovTech environments",
       "Research-led design driven entirely by Jailsoft Labs and engineering teams",
@@ -1001,7 +1001,7 @@ export const staticPagesData = {
       "We deliver our software to operate on private, local servers or high-security government clouds, avoiding public networks and standard internet paths entirely. Database columns are encrypted using AES-256 keys, protecting resident records, medical files, and booking details. Terminals require physical multi-factor access keys, ensuring only verified staff can view system panels.",
       "Our engineering groups run continuous security audits, checking code and monitoring terminal interactions to find potential risks before they can affect operations. By maintaining strict control over updates, Jailsoft keeps system infrastructures locked down and operating with complete administrative confidence."
     ],
-    image: "https://picsum.photos/seed/jailsoft-security/1200/800",
+    image: "https://images.unsplash.com/photo-1601138421149-a2e4ac654e94?auto=format&fit=crop&w=1200&q=80",
     features: [
       "AES-256 database column encryption keeping sensitive files highly protected",
       "Private local server deployments that run independently from public networks",
@@ -1029,7 +1029,7 @@ export const staticPagesData = {
       "The program integrates directly with state judicial registries to update arraignments and bond details automatically. It tracks court appearance schedules and custody updates, ensuring information matches across county booking and state registries while avoiding manual data entry errors.",
       "Our hardware adapters connect with standard industrial PLC controllers, camera networks, and duress radio arrays. By establishing reliable local connections, Jailsoft helps operators coordinate security teams, monitor facility walkways, and handle emergency events with complete operational confidence."
     ],
-    image: "https://picsum.photos/seed/jailsoft-integrations/1200/800",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Dynamic legal APIs connecting databases directly with county court portals",
       "Industrial PLC hardware interfaces linking with standard locking systems",
@@ -1057,7 +1057,7 @@ export const staticPagesData = {
       "Our hardware partners manufacture rugged steel enclosures, biometric wickets, and PLC units to our exact engineering designs. These certified suppliers use durable materials and safety-tested components, ensuring equipment holds up inside challenging masonry and steel corridors.",
       "We also coordinate with certified GovTech integrators who handle physical installations, run wiring configurations, and provide staff training. By partnering with experienced teams, Jailsoft ensures every installation meets national standards and operates with high uptime from day one."
     ],
-    image: "https://picsum.photos/seed/jailsoft-partners/1200/800",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Certified manufacturing partners supplying ruggedized physical security hardware",
       "Experienced systems integrators directing local facility wiring installations",
@@ -1084,7 +1084,7 @@ export const staticPagesData = {
       "We maintain a technical workplace focused entirely on code performance, systems architecture, and compliance standards. Our engineers design local databases, structure industrial PLC adapters, and model wireless layouts inside thick steel and concrete spaces. We avoid corporate trends, focusing purely on engineering complete solutions for our clients.",
       "Our QA and compliance researchers verify every update against strict national regulations, run continuous security tests, and author thorough technical document guides. If you are passionate about system stability, zero-trust security, and building rugged software configurations, explore our open engineering positions."
     ],
-    image: "https://picsum.photos/seed/jailsoft-careers/1200/800",
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Focused software roles coding secure, local relational database configurations",
       "Diagnostics QA positions testing industrial PLC door control interfaces",
@@ -1106,7 +1106,7 @@ export const staticPagesData = {
     description: "Read historic press statements from the Jailsoft Research Group, technical product announcements, and acquisition logs.",
     h1: "Press & Announcements",
     subtitle: "Historic announcements and technical release logs from Jailsoft Labs.",
-    image: "https://picsum.photos/seed/jailsoft-press/1200/800",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
     paragraphs: [
       "Jailsoft shares research discoveries, systems updates, and legal announcements through our formal press office. We write our statements in clear, technical language, avoiding marketing claims to provide clear information on corrections technology developments.",
       "Our announcements detail important database rollouts, testing milestones for biometric wickets, and insights from our research whitepapers. We also share formal updates on corporate changes, ensuring agencies and public partners have clear info on company direction and support paths.",
@@ -1130,3 +1130,72 @@ export const staticPagesData = {
     ]
   }
 };
+
+// Auto-upgrade any legacy/redirecting picsum.photos placeholder URLs to reliable, high-performance desaturated Unsplash URLs
+const unsplashMapping: Record<string, string> = {
+  // Products
+  "facility-management-suite": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+  "inmate-records-system": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+  "scheduling-and-staffing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  "visitation-management": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+  "commissary-platform": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "incident-reporting": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80",
+  "classification-and-risk-assessment": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+  "data-analytics-dashboard": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  "facility-security-overrides": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+  "biometric-access-control": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+  "cctv-and-video-surveillance": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+  "perimeter-intrusion-detection": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+  "duress-and-panic-systems": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+  "facility-iot-network": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+  "inmate-calling-systems": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+  "secure-messaging-and-mail": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80",
+  "video-visitation-kiosks": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+  "forensic-evidence-tracking": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80",
+  "incident-alert-system": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80",
+
+  // Solutions
+  "county-jails": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+  "state-prisons": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+  "federal-facilities": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+  "juvenile-detention": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+  "private-corrections": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+
+  // Resources
+  "case-studies": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+  "whitepapers": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+  "blog": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  "compliance-and-standards": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+  "faq": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+  "glossary": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+};
+
+const defaultFallbackImage = "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80";
+
+const upgradeImages = (arr: PageContent[]) => {
+  if (!arr) return;
+  for (const item of arr) {
+    if (item.image && item.image.includes("picsum.photos")) {
+      item.image = unsplashMapping[item.slug] || defaultFallbackImage;
+    }
+  }
+};
+
+// Apply upgrades to existing static arrays
+upgradeImages(productsData);
+upgradeImages(solutionsData);
+upgradeImages(resourcesData);
+
+// Apply upgrades to staticPagesData properties
+if (typeof staticPagesData !== "undefined" && staticPagesData) {
+  const pages = staticPagesData as any;
+  for (const key of Object.keys(pages)) {
+    const item = pages[key];
+    if (item.image && item.image.includes("picsum.photos")) {
+      item.image = unsplashMapping[key] || defaultFallbackImage;
+    }
+    if (item.image_list && item.image_list.includes("picsum.photos")) {
+      item.image_list = defaultFallbackImage;
+    }
+  }
+}

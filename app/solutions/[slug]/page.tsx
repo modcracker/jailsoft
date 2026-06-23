@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { solutionsData } from "@/lib/content";
 import PageHero from "@/components/PageHero";
+import SolutionBlueprint from "@/components/SolutionBlueprint";
 import { Metadata } from "next";
 
 interface PageProps {
@@ -61,12 +62,28 @@ export default async function SolutionPage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Jailsoft",
-      "url": "https://jailsoft.com"
+      "url": "https://jailsoft.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "EVU",
+        "url": "https://www.evu.com"
+      }
     },
     "areaServed": "US",
     "audience": {
       "@type": "Audience",
       "audienceType": "Corrections Administrators, Sheriffs, and Facility Supervisors"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Jailsoft"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "32",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   };
 
@@ -85,6 +102,10 @@ export default async function SolutionPage({ params }: PageProps) {
         specs={solution.specs}
         compliance={solution.compliance}
         links={solution.links}
+      />
+      <SolutionBlueprint
+        slug={solution.slug}
+        solutionName={solution.title.split("|")[0].trim()}
       />
     </div>
   );

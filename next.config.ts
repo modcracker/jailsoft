@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'fastly.picsum.photos',
+        port: '',
+        pathname: '/**', // This allows any path under the hostname
+      },
+      {
+        protocol: 'https',
         hostname: 'media.licdn.com',
         port: '',
         pathname: '/**', // This allows any path under the hostname
@@ -31,7 +37,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

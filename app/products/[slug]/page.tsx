@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { productsData } from "@/lib/content";
 import PageHero from "@/components/PageHero";
+import ProductSandbox from "@/components/ProductSandbox";
 import { Metadata } from "next";
 
 interface PageProps {
@@ -58,19 +59,40 @@ export default async function ProductPage({ params }: PageProps) {
     "name": product.h1 || product.title.split("|")[0].trim(),
     "description": product.subtitle || product.description,
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All",
+    "operatingSystem": "All, Enterprise Server, Offline Private Networks",
     "offers": {
       "@type": "Offer",
       "price": "0.00",
       "priceCurrency": "USD",
       "category": "Enterprise B2B Software",
-      "availability": "https://schema.org/LimitedAvailability"
+      "availability": "https://schema.org/LimitedAvailability",
+      "seller": {
+        "@type": "Organization",
+        "name": "Jailsoft",
+        "url": "https://jailsoft.com"
+      }
     },
     "featureList": product.features,
     "provider": {
       "@type": "Organization",
       "name": "Jailsoft",
-      "url": "https://jailsoft.com"
+      "url": "https://jailsoft.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "EVU",
+        "url": "https://www.evu.com"
+      }
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Jailsoft"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "48",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   };
 
@@ -89,6 +111,10 @@ export default async function ProductPage({ params }: PageProps) {
         specs={product.specs}
         compliance={product.compliance}
         links={product.links}
+      />
+      <ProductSandbox
+        slug={product.slug}
+        productName={product.title.split("|")[0].trim()}
       />
     </div>
   );

@@ -96,7 +96,7 @@ export default function AcquisitionModal() {
             <div className="mt-8 space-y-4">
               {/* Primary Call To Action */}
               <a
-                href="https://evu.com"
+                href="https://www.evu.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-white text-black py-4 px-6 font-sans text-xs font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors duration-200 border border-white"

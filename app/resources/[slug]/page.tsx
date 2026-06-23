@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { resourcesData } from "@/lib/content";
 import PageHero from "@/components/PageHero";
+import ResourceReader from "@/components/ResourceReader";
 import { Metadata } from "next";
 
 interface PageProps {
@@ -62,10 +63,34 @@ export default async function ResourcePage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Jailsoft",
-      "url": "https://jailsoft.com"
+      "url": "https://jailsoft.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "EVU",
+        "url": "https://www.evu.com"
+      }
     },
     "inLanguage": "en-US",
-    "audience": "Corrections Operators, Compliance Officers, and Security Technologists"
+    "audience": "Corrections Operators, Compliance Officers, and Security Technologists",
+    "author": {
+      "@type": "Organization",
+      "name": "Jailsoft Compliance Group"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jailsoft",
+      "url": "https://jailsoft.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jailsoft.com/logo.png"
+      }
+    },
+    "datePublished": "2026-06-22T12:00:00Z",
+    "dateModified": "2026-06-22T12:00:00Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://jailsoft.com/resources/${slug}`
+    }
   };
 
   return (
@@ -83,6 +108,10 @@ export default async function ResourcePage({ params }: PageProps) {
         specs={resource.specs}
         compliance={resource.compliance}
         links={resource.links}
+      />
+      <ResourceReader
+        slug={resource.slug}
+        resourceName={resource.title.split("|")[0].trim()}
       />
     </div>
   );

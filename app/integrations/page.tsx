@@ -1,6 +1,7 @@
 import React from "react";
 import { staticPagesData } from "@/lib/content";
 import PageHero from "@/components/PageHero";
+import IntegrationPlayground from "@/components/IntegrationPlayground";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,6 +43,9 @@ export default function IntegrationsPage() {
         compliance={content.compliance}
         links={content.links}
       />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+        <IntegrationPlayground />
+      </div>
     </div>
   );
 }

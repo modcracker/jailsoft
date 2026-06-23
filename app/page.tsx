@@ -77,112 +77,170 @@ export default function HomePage() {
       <AcquisitionModal />
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 md:py-32 border-b border-neutral-900 select-none overflow-hidden">
-        {/* Immersive high-security correctional monitoring background image */}
+      <section className="relative pt-24 pb-20 md:py-36 border-b border-neutral-900 select-none overflow-hidden bg-[#030712]">
+        
+        {/* TRUE IMMERSIVE FULL-WIDTH BACKGROUND IMAGE USING DASHBOARD MOCKUP */}
         <div className="absolute inset-0 z-0">
           <Image
-            src={heroBgImg}
-            alt="Detention Monitoring Security Command Desk background"
+            src={dashboardMockup}
+            alt="Jailsoft Enterprise Core Dashboard Blueprint Context"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-30 grayscale contrast-[1.25] brightness-[0.35]"
+            className="object-cover object-center opacity-[0.22] grayscale contrast-[1.2] brightness-[0.45] mix-blend-screen transition-all duration-700"
             placeholder="blur"
             referrerPolicy="no-referrer"
           />
-          {/* Real-time deep radial vignette overlay keeping layout fully accessible and modern */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
-          <div className="absolute inset-0 bg-black/60" />
+          {/* Subtle warm & cool human-crafted blue/emerald vignette leaks and lighting overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/95 via-[#030712]/80 to-[#030712]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/30 to-[#030712]/95" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
         </div>
 
-        {/* Subtle grid line backdrop backing */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 z-0" />
-        
-        {/* Dynamic vertical rules accent in hero center (Palantir design) */}
-        <div className="absolute right-12 top-1/4 hidden xl:flex space-x-[3px] h-48 opacity-15 z-0">
-          <div className="w-[1px] bg-white h-full" />
-          <div className="w-[2px] bg-neutral-400 h-full" />
-          <div className="w-[1px] bg-white h-full" />
-          <div className="w-[4px] bg-neutral-600 h-full" />
-          <div className="w-[1px] bg-white h-full" />
+        {/* Dynamic vertical rules accent in hero center (Axon and Lockheed-martin style) */}
+        <div className="absolute right-12 top-1/4 hidden xl:flex space-x-[4px] h-48 opacity-25 z-0">
+          <div className="w-[1px] bg-emerald-500 h-full animate-pulse" />
+          <div className="w-[2px] bg-neutral-800 h-full" />
+          <div className="w-[1px] bg-[#1d4ed8] h-full" />
+          <div className="w-[3px] bg-neutral-700 h-full" />
+          <div className="w-[1px] bg-neutral-800 h-full" />
         </div>
+
+        {/* Global Grid backdrop overlay with slightly more visible points */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#111827_1px,transparent_1px),linear-gradient(to_bottom,#0ca5e9_0.5px,transparent_0.5px)] bg-[size:5rem_5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_80%,transparent_100%)] opacity-[0.12] z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Tactical Frame Themed Container */}
-          <div className="border border-neutral-800 bg-neutral-950/70 p-6 sm:p-12 md:p-16 relative overflow-hidden backdrop-blur-md rounded-sm">
-            {/* Industrial corner marks */}
-            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-white/40" />
-            <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-white/40" />
-            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-white/40" />
-            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-white/40" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Ambient secure status readout */}
-            <div className="absolute top-3 right-4 font-mono text-[8px] text-neutral-500 select-none tracking-[0.25em] hidden sm:flex items-center space-x-2">
-              <span className="w-1 h-1 bg-yellow-500 rounded-full animate-ping" />
-              <span>SYS_CLEARANCE_SECURE // NODE:42.109.90.1</span>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left side: Premium Corporate Text Elements */}
+            <div className="lg:col-span-7 space-y-8">
               
-              <div className="lg:col-span-7 space-y-6">
-                <span className="font-mono text-[9px] text-neutral-450 tracking-[0.35em] uppercase block text-neutral-500">
-                  SOVEREIGN TECHNOLOGY SYSTEM-OF-RECORD
+              <div className="inline-flex items-center space-x-3 bg-slate-900/90 border border-slate-800 px-3.5 py-1.5 rounded-full">
+                <span className="font-mono text-[9px] text-[#10b981] font-black tracking-[0.3em] uppercase">
+                  COMPLIANCE CERTIFIED // CJIS LEVEL 4 AUDITED
                 </span>
-                
-                <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl uppercase tracking-[0.05em] text-white leading-tight">
-                  Sovereign <br className="hidden sm:inline" />
-                  Corrections <br className="hidden sm:inline" />
-                  Technology Platforms.
+              </div>
+              
+              <div className="space-y-4">
+                <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl uppercase tracking-[0.05em] text-white leading-none">
+                  Hardened <br />
+                  <span className="relative inline-block my-2 px-1 py-1 text-transparent font-black tracking-[0.08em] [text-stroke:1.5px_rgba(255,255,255,0.95)] [-webkit-text-stroke:1.5px_rgba(255,255,255,0.95)] select-none">
+                    {/* Upper high-contrast technical bar */}
+                    <span className="absolute top-0 left-0 right-0 h-[2px] bg-white block" />
+                    CORRECTIONS
+                    {/* Lower high-contrast technical bar */}
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white block" />
+                  </span>
+                  <br />
+                  Infrastructure.
                 </h1>
 
-                <p className="font-sans text-xs sm:text-sm text-neutral-400 font-light leading-relaxed max-w-2xl">
-                  Jailsoft engineers high-uptime software ledgers, hardware overrides, and monitored communications systems for high-pressure corrections environments. Designed to prevent security gaps, reduce operational friction, and maintain complete compliance rules.
+                <p className="font-sans text-xs sm:text-sm text-neutral-300 font-light leading-relaxed max-w-2xl">
+                  Jailsoft engineers hardened software ledgers, hardware door overrides, and fully monitored offender communication routers. Deployed nationwide, our zero-trust offline micro-clusters keep facility administration resilient through grid outages and audits.
                 </p>
-
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <Link
-                    href="/contact"
-                    className="bg-white hover:bg-neutral-200 text-black px-6 py-4 font-sans text-xs font-bold uppercase tracking-widest transition-colors duration-150 border border-white text-center w-full xs:w-auto"
-                  >
-                    Request Credentials →
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="bg-black hover:bg-neutral-950 text-white px-6 py-4 font-sans text-xs font-bold uppercase tracking-widest transition-colors duration-150 border border-neutral-800 hover:border-white text-center w-full xs:w-auto"
-                  >
-                    About Our Research Labs
-                  </Link>
-                </div>
               </div>
 
-              {/* Majestic High-Security Software Dashboard Mockup */}
-              <div className="lg:col-span-5">
-                <div className="relative w-full aspect-[4/3] bg-neutral-950 border border-neutral-800 rounded-sm overflow-hidden group">
-                  {/* Tactical overlay frames */}
-                  <div className="absolute top-3 left-3 z-10 font-mono text-[7px] text-neutral-400 uppercase tracking-widest bg-black/80 px-2 py-1 border border-neutral-800">
-                    ACTIVE_SYS_FEED // CONSOLE.VIEW_01
-                  </div>
-                  <Image
-                    src={dashboardMockup}
-                    alt="Jailsoft Enterprise Core Dashboard Showcase"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover grayscale contrast-[1.1] brightness-[0.85] transition-all duration-300 group-hover:scale-[1.01] group-hover:brightness-95 group-hover:contrast-[1.15]"
-                    placeholder="blur"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute bottom-3 right-3 z-10 font-mono text-[7px] text-white/50 tracking-wider">
-                    JMS_SYS: ACTIVE
-                  </div>
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-neutral-500/50" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-neutral-500/50" />
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-neutral-500/50" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-neutral-500/50" />
-                </div>
+              {/* Action Buttons with high interactive premium colors */}
+              <div className="flex flex-col xs:flex-row gap-4 pt-2">
+                <Link
+                  href="/contact"
+                  className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 font-sans text-xs font-black uppercase tracking-widest transition-all duration-300 border border-emerald-500 text-center rounded-[3px] shadow-[0_4px_20px_rgba(16,185,129,0.25)] flex items-center justify-center space-x-2"
+                >
+                  <span>Request Credentials</span>
+                  <span className="text-sm font-bold">→</span>
+                </Link>
+                <Link
+                  href="/about"
+                  className="bg-black/80 hover:bg-neutral-900 text-white px-8 py-4 font-sans text-xs font-bold uppercase tracking-widest transition-all duration-300 border border-neutral-800 hover:border-neutral-500 text-center rounded-[3px] backdrop-blur-sm"
+                >
+                  Research Labs Portfolio
+                </Link>
               </div>
 
             </div>
+
+            {/* Right side: Replaced overlapping mockup image with a premium, high-trust specifications card */}
+            <div className="lg:col-span-5 relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-sm blur-lg opacity-40 pointer-events-none" />
+              
+              <div className="relative bg-[#050914]/90 backdrop-blur-md border border-neutral-800/80 p-6 sm:p-8 rounded-sm select-none shadow-[0_30px_70px_rgba(0,0,0,0.85)] z-10 space-y-6">
+                
+                {/* Visual Header / Sub-badge */}
+                <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    <span className="font-mono text-[9px] text-neutral-400 font-bold uppercase tracking-[0.2em]">
+                      SYSTEM COMPLIANCE INTEL
+                    </span>
+                  </div>
+                  <span className="font-mono text-[9px] text-neutral-500 font-light">
+                    SPEC: SECURE // v4.2
+                  </span>
+                </div>
+
+                <div className="space-y-5">
+                  
+                  {/* Metric 1 */}
+                  <div className="group flex items-start space-x-4">
+                    <div className="w-12 h-12 shrink-0 bg-neutral-900 border border-neutral-800 flex items-center justify-center font-mono text-xs text-white group-hover:border-emerald-500 transition-colors">
+                      01
+                    </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-sans font-bold text-sm text-white">1,200+ Installations</span>
+                        <span className="px-1 py-0.5 bg-emerald-950/40 border border-emerald-900 text-[7px] font-mono text-emerald-400 uppercase rounded-xs">Deployed</span>
+                      </div>
+                      <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light">
+                        Trusted database configurations actively operating across county sheriff jails, municipal holding pods, and penitentiaries.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Metric 2 */}
+                  <div className="group flex items-start space-x-4">
+                    <div className="w-12 h-12 shrink-0 bg-neutral-900 border border-neutral-800 flex items-center justify-center font-mono text-xs text-emerald-400 group-hover:border-emerald-400 transition-colors">
+                      99%
+                    </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-sans font-bold text-sm text-white">PLC Override Latency</span>
+                        <span className="px-1 py-0.5 bg-blue-950/40 border border-blue-900 text-[7px] font-mono text-blue-400 uppercase rounded-xs">Uptime Metric</span>
+                      </div>
+                      <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light">
+                        Industrial PLC relays command instant hardwired door overrides and gate locks even during full local-grid outages.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Metric 3 */}
+                  <div className="group flex items-start space-x-4">
+                    <div className="w-12 h-12 shrink-0 bg-neutral-900 border border-neutral-800 flex items-center justify-center font-mono text-xs text-blue-400 group-hover:border-blue-400 transition-colors">
+                      FIPS
+                    </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-sans font-bold text-sm text-white">FIPS-140-2 Certification</span>
+                        <span className="px-1 py-0.5 bg-neutral-850 border border-neutral-700 text-[7px] font-mono text-neutral-350 uppercase rounded-xs">Standard</span>
+                      </div>
+                      <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light">
+                        Military-grade file encryption protects resident ledger data to meet the baseline of state audit profiles.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="border-t border-neutral-800 pt-4 flex items-center justify-between text-[9px] font-mono text-neutral-500">
+                  <span>AUDIT HASH: ISO-27001</span>
+                  <span>REGISTRY RECORD: VERIFIED</span>
+                </div>
+
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -194,24 +252,24 @@ export default function HomePage() {
       </div>
 
       {/* Interactive Command Center Section */}
-      <section className="py-16 bg-neutral-950/40 border-b border-neutral-900 select-none relative overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-neutral-900/10 rounded-full blur-[120px] pointer-events-none z-0" />
+      <section className="py-20 bg-neutral-50 border-y border-neutral-200 select-none relative overflow-hidden">
+        {/* Subtle light background accent */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none z-0" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-900 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-200 mb-12">
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#16a34a] animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                 <span className="font-mono text-[9px] text-neutral-500 tracking-[0.35em] uppercase block">
                   JAILSOFT SECURITY PLATFORM TRIAL
                 </span>
               </div>
-              <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-[0.05em] text-white">
-                Sovereign JMS Control Center
+              <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-[0.05em] text-neutral-900">
+                JMS Command Center
               </h2>
             </div>
-            <p className="font-sans text-xs text-neutral-400 font-light max-w-lg mt-2 md:mt-0 leading-relaxed">
+            <p className="font-sans text-xs text-neutral-650 text-neutral-700 font-light max-w-lg mt-2 md:mt-0 leading-relaxed">
               Experience the administrative dashboard used by sheriff offices and facility captains daily. Test active holding pod secure locks, explore the resident records ledger, and view active CJIS compliance logs.
             </p>
           </div>
@@ -299,19 +357,19 @@ export default function HomePage() {
       </div>
 
       {/* Massive desaturated Product Matrix */}
-      <section className="py-16 md:py-24 select-none">
+      <section className="py-20 md:py-28 bg-white border-y border-neutral-250 border-neutral-200 select-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-900 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-200 mb-12">
             <div className="space-y-2">
-              <span className="font-mono text-[9px] text-neutral-500 tracking-wider uppercase block">
+              <span className="font-mono text-[9px] text-[#059669] tracking-wider uppercase block font-bold">
                 SYSTEM SEGMENTS AND CONFIGURATIONS
               </span>
-              <h2 className="font-sans font-bold text-xl md:text-3xl uppercase tracking-widest text-white animate-fade-in">
+              <h2 className="font-sans font-bold text-xl md:text-3xl uppercase tracking-widest text-neutral-900 animate-fade-in">
                 System Framework Modules
               </h2>
             </div>
-            <p className="font-sans text-xs text-neutral-400 font-light max-w-md mt-2 md:mt-0">
+            <p className="font-sans text-xs text-neutral-600 font-normal max-w-md mt-2 md:mt-0 leading-relaxed">
               Explore specific clinical software modules, built to function offline, maintain data separation, and secure facilities.
             </p>
           </div>
@@ -320,9 +378,9 @@ export default function HomePage() {
             
             {/* Col 1: Software Core */}
             <div className="space-y-6">
-              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-900">
-                <Shield className="w-4 h-4 text-white" />
-                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-white">
+              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-200">
+                <Shield className="w-4 h-4 text-emerald-600" />
+                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-neutral-900">
                   I. SOFTWARE ECOSYSTEMS
                 </h3>
               </div>
@@ -331,12 +389,12 @@ export default function HomePage() {
                   <Link
                     key={idx}
                     href={item.href}
-                    className="block group bg-neutral-950 hover:bg-neutral-900 border border-neutral-905 border-neutral-900 p-5 rounded-sm hover:border-white transition-all duration-200"
+                    className="block group bg-neutral-50 hover:bg-neutral-100/80 border border-neutral-200 p-5 rounded-sm hover:border-emerald-600 hover:shadow-sm transition-all duration-200"
                   >
-                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-white group-hover:text-neutral-300 transition-colors">
+                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 group-hover:text-emerald-700 transition-colors">
                       {item.name}
                     </h4>
-                    <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light pt-1.5">
+                    <p className="font-sans text-[11px] text-neutral-600 leading-normal font-light pt-1.5">
                       {item.desc}
                     </p>
                   </Link>
@@ -346,9 +404,9 @@ export default function HomePage() {
 
             {/* Col 2: Hardware Core */}
             <div className="space-y-6">
-              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-900">
-                <Cpu className="w-4 h-4 text-white" />
-                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-white">
+              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-200">
+                <Cpu className="w-4 h-4 text-emerald-600" />
+                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-neutral-900">
                   II. SECURITY HARDWARE
                 </h3>
               </div>
@@ -357,12 +415,12 @@ export default function HomePage() {
                   <Link
                     key={idx}
                     href={item.href}
-                    className="block group bg-neutral-950 hover:bg-neutral-900 border border-neutral-905 border-neutral-900 p-5 rounded-sm hover:border-white transition-all duration-200"
+                    className="block group bg-neutral-50 hover:bg-neutral-100/80 border border-neutral-200 p-5 rounded-sm hover:border-emerald-600 hover:shadow-sm transition-all duration-200"
                   >
-                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-white group-hover:text-neutral-300 transition-colors">
+                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 group-hover:text-emerald-700 transition-colors">
                       {item.name}
                     </h4>
-                    <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light pt-1.5">
+                    <p className="font-sans text-[11px] text-neutral-600 leading-normal font-light pt-1.5">
                       {item.desc}
                     </p>
                   </Link>
@@ -372,9 +430,9 @@ export default function HomePage() {
 
             {/* Col 3: Communications */}
             <div className="space-y-6">
-              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-900">
-                <Key className="w-4 h-4 text-white" />
-                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-white">
+              <div className="flex items-center space-x-2 pb-3 border-b border-neutral-200">
+                <Key className="w-4 h-4 text-emerald-600" />
+                <h3 className="font-mono text-[11px] font-bold tracking-widest uppercase text-neutral-900">
                   III. MONITOR CHANNELS
                 </h3>
               </div>
@@ -383,12 +441,12 @@ export default function HomePage() {
                   <Link
                     key={idx}
                     href={item.href}
-                    className="block group bg-neutral-950 hover:bg-neutral-900 border border-neutral-905 border-neutral-900 p-5 rounded-sm hover:border-white transition-all duration-200"
+                    className="block group bg-neutral-50 hover:bg-neutral-100/80 border border-neutral-200 p-5 rounded-sm hover:border-emerald-600 hover:shadow-sm transition-all duration-200"
                   >
-                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-white group-hover:text-neutral-300 transition-colors">
+                    <h4 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 group-hover:text-emerald-700 transition-colors">
                       {item.name}
                     </h4>
-                    <p className="font-sans text-[11px] text-neutral-400 leading-normal font-light pt-1.5">
+                    <p className="font-sans text-[11px] text-neutral-600 leading-normal font-light pt-1.5">
                       {item.desc}
                     </p>
                   </Link>
@@ -422,17 +480,17 @@ export default function HomePage() {
                 Every server deployment, dynamic ledger calculation in booking, and PLC-integrated door override undergoes severe stress testing in concrete environments. Operating entirely offline under private networks, the systems support zero-trust infrastructure, preventing unauthorized network logins while keeping containment boundaries stable.
               </p>
               
-              <div className="flex gap-x-6 gap-y-2 flex-wrap pt-4 font-mono text-[10px] text-neutral-500 uppercase">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-white" />
+              <div className="flex flex-wrap gap-2 pt-4 select-none">
+                <div className="inline-flex items-center space-x-2 px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full font-mono text-[9px] uppercase tracking-wider text-neutral-300">
+                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shrink-0" />
                   <span>CJIS level 4 compliant Data</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-white" />
+                <div className="inline-flex items-center space-x-2 px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full font-mono text-[9px] uppercase tracking-wider text-neutral-300">
+                  <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse shrink-0" />
                   <span>PREA Safety checklists</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-white" />
+                <div className="inline-flex items-center space-x-2 px-3 py-1.5 bg-neutral-900 border border-neutral-805 border-neutral-800 rounded-full font-mono text-[9px] uppercase tracking-wider text-neutral-300">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse shrink-0" />
                   <span>FIPS 140-2 secure keys</span>
                 </div>
               </div>
@@ -454,61 +512,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Sovereign Procurement & GSA Contracting Portal */}
-      <section className="py-16 md:py-24 border-t border-neutral-900 bg-[#030303] relative overflow-hidden select-none">
-        <div className="absolute right-0 bottom-0 w-80 h-80 bg-neutral-900/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Procurement & GSA Contracting Portal */}
+      <section className="py-20 md:py-28 border-t border-neutral-200 bg-neutral-50 relative overflow-hidden select-none">
+        <div className="absolute right-0 bottom-0 w-80 h-80 bg-neutral-200/40 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-900 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between pb-8 border-b border-neutral-200 mb-12">
             <div className="space-y-3">
-              <span className="font-mono text-[9px] text-[#dc2626] tracking-[0.35em] uppercase block font-bold">
+              <span className="font-mono text-[9px] text-red-650 tracking-[0.35em] uppercase block font-bold text-red-700">
                 MUNICIPAL PROCUREMENT & SHERIFF DEPT GUIDELINES
               </span>
-              <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-[0.05em] text-white">
+              <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-[0.05em] text-neutral-900">
                 RFP Bidding & Contracts
               </h2>
             </div>
-            <p className="font-sans text-xs text-neutral-400 font-light max-w-md mt-2 md:mt-0 leading-relaxed">
+            <p className="font-sans text-xs text-neutral-600 font-normal max-w-md mt-2 md:mt-0 leading-relaxed">
               Jailsoft facilitates smooth administrative review with complete compliance documentation. We adhere to GSA specifications, support sole-source sheriff procurement procedures, and provide pre-written RFP matrices.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-neutral-950 border border-neutral-900 rounded-sm relative group hover:border-[#16a34a]/40 transition-colors">
-              <div className="w-8 h-8 rounded bg-[#050505] border border-neutral-800 flex items-center justify-center font-mono text-[10px] text-white font-bold mb-4">
+            <div className="p-6 bg-white border border-neutral-200 rounded-sm relative group hover:border-[#059669] hover:shadow-md transition-all duration-300">
+              <div className="w-8 h-8 rounded bg-neutral-100 border border-neutral-200 flex items-center justify-center font-mono text-[10px] text-neutral-800 font-bold mb-4">
                 01
               </div>
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white mb-2">GSA Schedule 70 Contract</h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 mb-2">GSA Schedule 70 Contract</h3>
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Direct purchasing bypass for federal penitentiaries and eligible county sheriffs. Pre-negotiated GSA pricing simplifies procurement timelines, reducing red tape from 12 months down to 14 business days.
               </p>
             </div>
 
-            <div className="p-6 bg-neutral-950 border border-neutral-900 rounded-sm relative group hover:border-[#16a34a]/40 transition-colors">
-              <div className="w-8 h-8 rounded bg-[#050505] border border-neutral-800 flex items-center justify-center font-mono text-[10px] text-white font-bold mb-4">
+            <div className="p-6 bg-white border border-neutral-200 rounded-sm relative group hover:border-[#059669] hover:shadow-md transition-all duration-300">
+              <div className="w-8 h-8 rounded bg-neutral-100 border border-neutral-200 flex items-center justify-center font-mono text-[10px] text-neutral-800 font-bold mb-4">
                 02
               </div>
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white mb-2">Sole Source Justification</h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 mb-2">Sole Source Justification</h3>
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Because Jailsoft remains the only certified provider with localized hardwired door overrides and offline database ledgers built into a single CJIS platform, sheriff offices can expedite sole-source justifications seamlessly.
               </p>
             </div>
 
-            <div className="p-6 bg-[#030303] border border-neutral-900 rounded-sm relative group hover:border-white transition-colors">
-              <div className="w-8 h-8 rounded bg-neutral-900 border border-neutral-800 flex items-center justify-center font-mono text-[10px] text-white font-bold mb-4">
+            <div className="p-6 bg-white border border-neutral-200 rounded-sm relative group hover:border-[#059669] hover:shadow-md transition-all duration-300">
+              <div className="w-8 h-8 rounded bg-neutral-100 border border-neutral-200 flex items-center justify-center font-mono text-[10px] text-neutral-800 font-bold mb-4">
                 03
               </div>
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white mb-2">RFP Matrix Assist</h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 mb-2">RFP Matrix Assist</h3>
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Our policy specialists assist county boards in writing clear, unambiguous RFP specifications regarding server uptime, PREA audit logging compliance, and backup satellite telemetry requirements.
               </p>
             </div>
 
-            <div className="p-6 bg-neutral-950 border border-neutral-900 rounded-sm relative group hover:border-[#16a34a]/40 transition-colors">
-              <div className="w-8 h-8 rounded bg-[#050505] border border-neutral-800 flex items-center justify-center font-mono text-[10px] text-white font-bold mb-4">
+            <div className="p-6 bg-white border border-neutral-200 rounded-sm relative group hover:border-[#059669] hover:shadow-md transition-all duration-300">
+              <div className="w-8 h-8 rounded bg-neutral-100 border border-neutral-200 flex items-center justify-center font-mono text-[10px] text-neutral-800 font-bold mb-4">
                 04
               </div>
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white mb-2">CJIS Compliance Bonding</h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900 mb-2">CJIS Compliance Bonding</h3>
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Every software contract is backed by a performance bond securing state audit compliance. We guarantee 99.99% database uptime across offline micro-clusters regardless of surrounding local grid outages.
               </p>
             </div>
@@ -577,71 +635,71 @@ export default function HomePage() {
       </section>
 
       {/* Informative, highly semantic human resource section to boost index ranking */}
-      <section className="py-16 md:py-24 border-t border-neutral-900 bg-neutral-950/20">
+      <section className="py-20 md:py-28 border-t border-neutral-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-6 mb-12">
-            <span className="font-mono text-[9px] text-neutral-500 tracking-wider uppercase block">
+            <span className="font-mono text-[9px] text-[#059669] tracking-wider uppercase block font-bold">
               CORRECTIONAL TECHNOLOGY AND SYSTEMS MANAGEMENT STANDARDS
             </span>
-            <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-widest text-white">
-              Sovereign Jail Management & Prison Software Lexicon
+            <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-widest text-neutral-900">
+              Enterprise Jail Management & Prison Software Lexicon
             </h2>
-            <p className="font-sans text-xs md:text-sm text-neutral-400 font-light leading-relaxed">
+            <p className="font-sans text-xs md:text-sm text-neutral-650 text-neutral-655 text-neutral-600 font-light leading-relaxed">
               Managing large-scale detention facilities, high-intake county jails, and secure state penitentiaries requires a robust mesh of software architecture and hardwired physical safeguards. In modern correctional systems, computerized ledgers represent the backbone of risk mitigation, state audit compliance, and general security.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-450 hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 1. Jail Management Software (JMS)
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 A primary database engine tracking every inmate or detainee from initial booking, mugshot intake, property storage, and medical triaging, to eventual release or court transfer. A modern JMS must prevent misclassifications, coordinate safe cell grouping, and maintain high-speed access records.
               </p>
             </div>
 
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 2. Prison Management Systems (PMS)
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Long-term administrative software targeting recidivism scoring, vocational training credits, disciplinary incident tracking, case manager assignments, and sentence progress calculations, customized for complex state and federal custody networks.
               </p>
             </div>
 
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 3. CJIS & PREA Compliance Engines
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Adhering to the Criminal Justice Information Services (CJIS) security protocols ensures inmate fingerprints, records, and cases are shielded under certified federal standards. Integrated PREA compliance modules manage safe housing choices.
               </p>
             </div>
 
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 4. Automated Guard & Shift Schedulers
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Maintains safe deputy-to-inmate ratios across all housing pods. Automated scheduling software prevents fatigue-related errors, logs actual shift clock-ins, overrides manual overtime favorites, and aligns with union or county staffing policies.
               </p>
             </div>
 
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 5. Secure Resident Communications & Calling
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Provides monitored voicemail pipelines, real-time audio translation filters, digital mail inspecting systems, and high-HD video visitation kiosks. Designed to keep families safely connected while ensuring jail staff can automatically scan for critical code words.
               </p>
             </div>
 
-            <div className="space-y-3 p-6 bg-neutral-950 border border-neutral-900 rounded-sm">
-              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-white">
+            <div className="space-y-3 p-6 bg-neutral-50 border border-neutral-200 rounded-sm hover:border-neutral-400 hover:shadow-xs transition-colors">
+              <h3 className="font-sans font-bold text-xs uppercase tracking-wider text-neutral-900">
                 6. Smart Physical Gates & PLC Relays
               </h3>
-              <p className="font-sans text-[11px] text-neutral-400 leading-relaxed font-light">
+              <p className="font-sans text-[11px] text-neutral-600 leading-relaxed font-light">
                 Unifies computerized databases with hardware relays to command smart magnetic locks, check fingerprint wickets, scan perimeter fences, and alert staff of immediate duress with accurate localized mapping coordinates.
               </p>
             </div>
@@ -669,7 +727,7 @@ export default function HomePage() {
                   "@type": "Organization",
                   "name": "EVU"
                 },
-                "description": "Jailsoft is a high-security sovereign technological ledger and administrative system-of-record engineered for incarceration environments, county jails, federal prisons, and municipal lockups.",
+                "description": "Jailsoft is a high-security enterprise technological ledger and administrative system-of-record engineered for incarceration environments, county jails, federal prisons, and municipal lockups.",
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "Government Sales & Inmate Systems Integration",

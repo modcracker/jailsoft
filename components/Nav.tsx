@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu, X, ChevronDown, ShieldAlert } from "lucide-react";
+import { Menu, X, ChevronDown, ShieldAlert, Shield, Cpu, PhoneCall, Send, Terminal, CheckCircle2, RefreshCw } from "lucide-react";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,6 +62,24 @@ export default function Nav() {
     { name: "Press Archive", href: "/press" }
   ];
 
+  const [dispatchNode, setDispatchNode] = useState("");
+  const [dispatchStatus, setDispatchStatus] = useState<"idle" | "dispatching" | "dispatched">("idle");
+  const [incidentLevel, setIncidentLevel] = useState("L1_DIAGNOSTICS");
+
+  const handleDispatch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!dispatchNode.trim()) return;
+    setDispatchStatus("dispatching");
+    setTimeout(() => {
+      setDispatchStatus("dispatched");
+    }, 1205);
+  };
+
+  const resetDispatch = () => {
+    setDispatchNode("");
+    setDispatchStatus("idle");
+  };
+
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
@@ -75,12 +93,12 @@ export default function Nav() {
         <span className="hidden xs:inline">Jailsoft acquired by EVU.com</span>
         <span className="xs:hidden">Acquired by EVU.com</span>
         <span className="text-neutral-700 font-mono">|</span>
-        <a href="https://evu.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 underline font-extrabold transition-colors">
-          VISIT EVU.COM →
+        <a href="https://www.evu.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 underline font-extrabold transition-colors">
+          VISIT WWW.EVU.COM →
         </a>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex h-16 items-center justify-between">
           
           {/* Logo & Vertical Bar design */}
@@ -95,8 +113,6 @@ export default function Nav() {
                   {/* Center secure override tumbler indicator */}
                   <path d="M12 14v3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-                {/* Active telemetry neon status lock point */}
-                <span className="absolute -top-[1.5px] -right-[1.5px] w-2 h-2 bg-neutral-400 rounded-full border border-black shadow-[0_0_3px_rgba(255,255,255,0.7)]" />
               </div>
               <span className="font-sans font-black text-sm sm:text-base tracking-[0.25em] text-white uppercase group-hover:text-neutral-300 transition-colors">
                 JAIL<span className="text-neutral-500 font-light">SOFT</span>
@@ -120,30 +136,125 @@ export default function Nav() {
                 className="flex items-center space-x-1.5 font-sans text-xs uppercase tracking-widest font-semibold hover:text-neutral-300 transition-colors py-2"
               >
                 <span>Products</span>
-                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+                <ChevronDown className="w-3.5 h-3.5 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
               </Link>
               
-              {/* Massive structured Mega-menu */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:grid grid-cols-3 gap-6 bg-black border border-neutral-800 p-6 w-[640px] shadow-[0_15px_30px_rgba(0,0,0,0.8)] filter">
+              {/* Massive structured Mega-menu anchored relative to Products, styled with ultra polished high density grid & custom dispatch widget */}
+              <div className="absolute left-[-160px] xl:left-[-220px] top-full hidden group-hover:grid grid-cols-4 gap-6 bg-black border border-neutral-800 p-6 w-[840px] shadow-[0_20px_40px_rgba(0,0,0,0.95)] z-50 before:content-[''] before:absolute before:block before:w-full before:h-4 before:-top-4 before:left-0">
                 {productCategories.map((category) => (
-                  <div key={category.name} className="space-y-3">
-                    <span className="font-mono text-[9px] font-bold text-neutral-500 tracking-wider uppercase border-b border-neutral-900 pb-1.5 block">
-                      {category.name}
-                    </span>
-                    <ul className="space-y-1.5">
+                  <div key={category.name} className="space-y-4">
+                    {/* Header with category specific icons */}
+                    <div className="flex items-center space-x-1.5 border-b border-neutral-900 pb-2">
+                      {category.name === "Software Systems" && <Shield className="w-3.5 h-3.5 text-neutral-400" />}
+                      {category.name === "Security Hardware" && <Cpu className="w-3.5 h-3.5 text-neutral-400" />}
+                      {category.name === "Secure Communications" && <PhoneCall className="w-3.5 h-3.5 text-neutral-400" />}
+                      <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">
+                        {category.name}
+                      </span>
+                    </div>
+                    
+                    <ul className="space-y-2">
                       {category.links.map((link) => (
                         <li key={link.href}>
                           <Link
                             href={link.href}
-                            className="font-sans text-[11px] text-neutral-400 hover:text-white transition-colors duration-150 block truncate"
+                            className="group/link flex items-center space-x-1.5 font-sans text-[11px] text-neutral-400 hover:text-white transition-colors duration-155 block truncate"
                           >
-                            {link.name}
+                            <span className="text-[9px] text-neutral-600 group-hover/link:text-emerald-400 transition-colors">▶</span>
+                            <span className="border-b border-transparent group-hover/link:border-emerald-500/20">{link.name}</span>
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
                 ))}
+
+                {/* Column 4: Interactive Dispatch Panel */}
+                <div className="col-span-1 bg-neutral-950/90 border border-neutral-900 focus-within:border-neutral-800 p-4 rounded-sm flex flex-col justify-between space-y-3">
+                  <div>
+                    <div className="flex items-center space-x-1.5 border-b border-neutral-900 pb-2 mb-2">
+                      <Terminal className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">
+                        SYS_DISPATCH_CONSOLE
+                      </span>
+                    </div>
+                    <p className="font-sans text-[10px] text-neutral-500 leading-relaxed font-light">
+                      Query operational logs or dispatch priority hardware synchronization teams to high-security zones.
+                    </p>
+                  </div>
+
+                  {dispatchStatus === "idle" && (
+                    <form onSubmit={handleDispatch} className="space-y-2">
+                      <div>
+                        <label className="block font-mono text-[8px] text-neutral-400 uppercase tracking-widest mb-1 flex items-center">
+                          Target Node / Zone ID
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={dispatchNode}
+                          onChange={(e) => setDispatchNode(e.target.value)}
+                          placeholder="ZONE-D // BLOCK-12"
+                          className="w-full bg-black border border-neutral-800 px-2 py-1 text-[10px] font-mono text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-600"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-mono text-[8px] text-neutral-400 uppercase tracking-widest mb-1 flex items-center">
+                          Priority Protocol
+                        </label>
+                        <select
+                          value={incidentLevel}
+                          onChange={(e) => setIncidentLevel(e.target.value)}
+                          className="w-full bg-black border border-neutral-800 px-1.5 py-1 text-[10px] font-mono text-neutral-300 focus:outline-none focus:border-neutral-600"
+                        >
+                          <option value="L1_DIAGNOSTICS">L1 // DIAGNOSTICS CHECK</option>
+                          <option value="L2_HARDWARE_SYNC">L2 // HARDWARE RESYNC</option>
+                          <option value="L3_SEC_RESTORE">L3 // LOCKDOWN OVERRIDE</option>
+                        </select>
+                      </div>
+                      <button
+                        type="submit"
+                        className="w-full bg-white hover:bg-neutral-200 text-black text-[9px] font-sans font-black uppercase tracking-wider py-1.5 transition-all flex items-center justify-center space-x-1 cursor-pointer"
+                      >
+                        <Send className="w-3 h-3" />
+                        <span>Dispatch Signal</span>
+                      </button>
+                    </form>
+                  )}
+
+                  {dispatchStatus === "dispatching" && (
+                    <div className="py-6 flex flex-col items-center justify-center space-y-2">
+                      <RefreshCw className="w-5 h-5 text-emerald-400 animate-spin" />
+                      <span className="font-mono text-[9px] text-neutral-400 tracking-wider uppercase animate-pulse">
+                        Encrypting & Routing...
+                      </span>
+                    </div>
+                  )}
+
+                  {dispatchStatus === "dispatched" && (
+                    <div className="bg-neutral-900/50 border border-emerald-950 p-2.5 rounded-sm space-y-2">
+                      <div className="flex items-center space-x-1.5 text-emerald-400">
+                        <CheckCircle2 className="w-4 h-4 shrink-0" />
+                        <span className="font-mono text-[9px] font-black uppercase tracking-wider">
+                          SIGNAL SENT SUCCESSFULLY
+                        </span>
+                      </div>
+                      <div className="font-mono text-[8px] text-neutral-400 space-y-0.5">
+                        <p>NODE: <span className="text-white">{dispatchNode}</span></p>
+                        <p>LEVEL: <span className="text-white">{incidentLevel}</span></p>
+                        <p>STAMP: <span className="text-emerald-500">2026-06-22</span></p>
+                        <p>CODE: <span className="text-white">SYS_OP_0x8C1B</span></p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={resetDispatch}
+                        className="w-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-[8px] font-mono uppercase tracking-wider py-1 transition-all cursor-pointer"
+                      >
+                        Reset Console
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -157,7 +268,7 @@ export default function Nav() {
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </Link>
               
-              <div className="absolute left-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
+              <div className="absolute left-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)] before:content-[''] before:absolute before:block before:w-full before:h-4 before:-top-4 before:left-0">
                 {solutions.map((item) => (
                   <Link
                     key={item.href}
@@ -180,7 +291,7 @@ export default function Nav() {
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </Link>
               
-              <div className="absolute left-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
+              <div className="absolute left-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)] before:content-[''] before:absolute before:block before:w-full before:h-4 before:-top-4 before:left-0">
                 {resources.map((item) => (
                   <Link
                     key={item.href}
@@ -200,7 +311,7 @@ export default function Nav() {
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
               
-              <div className="absolute right-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
+              <div className="absolute right-0 top-full hidden group-hover:block bg-black border border-neutral-800 py-3 w-48 shadow-[0_15px_30px_rgba(0,0,0,0.8)] before:content-[''] before:absolute before:block before:w-full before:h-4 before:-top-4 before:left-0">
                 <Link
                   href="/about"
                   className="font-sans text-[11px] text-neutral-400 hover:text-white hover:bg-neutral-950 transition-colors px-4 py-2 block border-b border-neutral-900"

@@ -1,6 +1,7 @@
 import React from "react";
 import { staticPagesData } from "@/lib/content";
 import PageHero from "@/components/PageHero";
+import PressReleaseTerminal from "@/components/PressReleaseTerminal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,13 +36,16 @@ export default function PressPage() {
       <PageHero
         title={content.title}
         subtitle={content.subtitle}
-        image={content.image || "https://picsum.photos/seed/jailsoft-press-alt/1200/800"}
+        image={content.image || "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80"}
         paragraphs={content.paragraphs}
         features={content.features}
         specs={content.specs}
         compliance={content.compliance}
         links={content.links}
       />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+        <PressReleaseTerminal />
+      </div>
     </div>
   );
 }

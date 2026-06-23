@@ -16,8 +16,54 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Jailsoft | Corrections & Justice Tech Systems",
+  metadataBase: new URL("https://jailsoft.com"),
+  title: {
+    default: "Jailsoft | Corrections & Justice Tech Systems",
+    template: "%s | Jailsoft",
+  },
   description: "Enterprise software, hardware, and communications systems for corrections, detention, and justice facilities.",
+  keywords: [
+    "Jailsoft",
+    "corrections tech",
+    "jail systems developer",
+    "justice administration software",
+    "detention administration platform",
+    "CJIS compliant databases",
+    "prison security systems"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://jailsoft.com",
+    siteName: "Jailsoft",
+    title: "Jailsoft | Corrections & Justice Tech Systems",
+    description: "Enterprise software, hardware, and communications systems for corrections, detention, and justice facilities.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Jailsoft Corrections & Justice Tech Systems",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jailsoft | Corrections & Justice Tech Systems",
+    description: "Enterprise software, hardware, and communications systems for corrections, detention, and justice facilities.",
+    images: ["https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

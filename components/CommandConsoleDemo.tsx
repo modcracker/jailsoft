@@ -38,7 +38,7 @@ export default function CommandConsoleDemo() {
   const [logs, setLogs] = useState<string[]>([
     "SYS_INIT // Booting Jailsoft Safe-Incarceration Kernel...",
     "SEC_STATUS_CHECK // CJIS level 4 secure database connection: VERIFIED",
-    "NODE_HEALTH // PLC hardwired relay switches synchronized",
+    "SYS_HEALTH // PLC hardwired relay switches synchronized",
     "INFO // 234 active resident records loaded into county ledger"
   ]);
   const [isOptimizing, setIsOptimizing] = useState(false);
@@ -170,7 +170,7 @@ export default function CommandConsoleDemo() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
           </div>
           <span className="font-mono text-[10px] tracking-widest text-[#dc2626] uppercase font-bold">
-            JMS_NODE_ACTIVE // GRID: COUNTY_WEST_70
+            JMS_SYSTEM_ACTIVE // GRID: COUNTY_WEST_70
           </span>
         </div>
         
